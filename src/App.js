@@ -4,9 +4,13 @@ import React from 'react';
 import Person from './components/Person';
 
 function App() {
+  const changNameHandler = (e) => {
+    console.log(e);
+  }
   return (
     <div className="App">
       <h1>This is the first app</h1>
+      <button onClick={ (e) => changNameHandler(e) }>Change Name</button>
       <Person name="Tuyên" age="26">Content of Person Tag</Person>
     </div>
 
