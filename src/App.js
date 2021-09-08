@@ -37,7 +37,8 @@ function App() {
       <Example></Example>
 
       <h3>Person 1</h3>
-      <Person name={listPerson[0].name} age={listPerson[0].age}></Person>
+      <Person clickHere={() => setToAnotherPerson()} name={listPerson[0].name} age={listPerson[0].age}></Person>
+      <Person clickHere={setToAnotherPerson} name={listPerson[1].name} age={listPerson[1].age}></Person>
       <button onClick={() => setToAnotherPerson()}>Đổi Person</button>
     </div>
 
