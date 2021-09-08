@@ -26,6 +26,16 @@ function App() {
     ])
   }
 
+  const switcheNameHandler = (e) => {
+    console.log("Show Event:");
+    console.log(e.target);
+    // setListPerson([
+    //   {name: "Tedu 4.5", age: 10},
+    //   {name: "Tedu 6", age: 11},
+    //   {name: "Tedu 8", age: 12}
+    // ])
+  }
+
   return (
     <div className="App">
       <h1>This is the first app</h1>
@@ -38,7 +48,7 @@ function App() {
 
       <h3>Person 1</h3>
       <Person clickHere={() => setToAnotherPerson()} name={listPerson[0].name} age={listPerson[0].age}></Person>
-      <Person clickHere={setToAnotherPerson} name={listPerson[1].name} age={listPerson[1].age}></Person>
+      <Person changed={switcheNameHandler} clickHere={setToAnotherPerson} name={listPerson[1].name} age={listPerson[1].age}></Person>
       <button onClick={() => setToAnotherPerson()}>Đổi Person</button>
     </div>
 
