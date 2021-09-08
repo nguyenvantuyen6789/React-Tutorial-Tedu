@@ -1,17 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import Person from './components/Person';
 
 function App() {
   const changNameHandler = (e) => {
     console.log(e);
   }
+
+  const [count, setCount] = useState(0);
+
   return (
     <div className="App">
       <h1>This is the first app</h1>
       <button onClick={ (e) => changNameHandler(e) }>Change Name</button>
       <Person name="Tuyên" age="26">Content of Person Tag</Person>
+
+      <p>You clicked {count} times</p>
+      <button onClick={ () => setCount(count + 1) }>Tăng Count</button>
     </div>
 
     // Cách 2
