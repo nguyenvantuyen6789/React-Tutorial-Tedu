@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <h1>This is the first app</h1>
-      <Person></Person>
+      <Person name="Tuyên" age="26">Content of Person Tag</Person>
     </div>
 
     // Cách 2
