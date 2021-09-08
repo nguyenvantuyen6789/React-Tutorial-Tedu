@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Person from './components/Person';
+import Example from './components/Example';
 
 function App() {
   const changNameHandler = (e) => {
@@ -18,6 +19,7 @@ function App() {
 
       <p>You clicked {count} times</p>
       <button onClick={ () => setCount(count + 1) }>Tăng Count</button>
+      <Example></Example>
     </div>
 
     // Cách 2
