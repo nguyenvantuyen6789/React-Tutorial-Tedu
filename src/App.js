@@ -5,6 +5,7 @@ import Person from './components/Person';
 import Example from './components/Example';
 
 function App() {
+  const [showPerson, setShowPerson] = useState(true);
   const changNameHandler = (e) => {
     console.log(e);
   }
@@ -36,6 +37,12 @@ function App() {
     // ])
   }
 
+  const togglePerson = (e) => {
+    setShowPerson(!showPerson);
+  }
+
+  
+
   return (
     <div className="App">
       <h1>This is the first app</h1>
@@ -50,6 +57,17 @@ function App() {
       <Person clickHere={() => setToAnotherPerson()} name={listPerson[0].name} age={listPerson[0].age}></Person>
       <Person changed={switcheNameHandler} clickHere={setToAnotherPerson} name={listPerson[1].name} age={listPerson[1].age}></Person>
       <button onClick={() => setToAnotherPerson()}>Đổi Person</button>
+
+      <h3>Toggle Person</h3>
+      <button onClick={() => togglePerson()}>Toggle Person</button>
+      {
+        showPerson == true?
+        <div>
+          <Person name={listPerson[0].name} age={listPerson[0].age}></Person>
+        </div>
+        : null
+      }
+
     </div>
 
     // Cách 2
