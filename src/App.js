@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
 import Person from './components/Person';
 import Example from './components/Example';
+import Button, { LoadingButton, ButtonGroup } from '@atlaskit/button';
+import StarFilledIcon from '@atlaskit/icon/glyph/star-filled';
 
 function App() {
   const [showPerson, setShowPerson] = useState(true);
@@ -67,6 +68,38 @@ function App() {
         </div>
         : null
       }
+
+      <h3>Button</h3>
+
+      <Button appearance="primary">Submit</Button>
+      <Button appearance="primary" isDisabled>Submit</Button>
+      <Button appearance="primary" isSelected>Submit</Button>
+      <Button appearance="primary" isLoading>Submit</Button>
+      <Button appearance="subtle">Nút Khó Thấy</Button>
+      <Button appearance="link">Link</Button>
+      <Button appearance="warning">Link</Button>
+      <Button appearance="danger">Link</Button>
+      <Button appearance="danger" iconAfter={<StarFilledIcon label="Star icon" size="small" />}>Icon After</Button>
+        
+      <h3>Button Full Width</h3>
+      
+      <Button shouldFitContainer appearance="primary">Full width button</Button>
+
+
+      <h3>Loading button</h3>
+      <LoadingButton appearance="primary">Loading button</LoadingButton>
+      <LoadingButton appearance="primary" isLoading>Loading button</LoadingButton>
+
+      <h3>Button Group</h3>
+      <ButtonGroup>
+        <Button appearance="primary">Default</Button>
+        <Button appearance="primary" spacing="compact">
+          Compact
+        </Button>
+        <Button spacing="none" appearance="subtle-link">
+          None
+        </Button>
+      </ButtonGroup>
 
     </div>
 
